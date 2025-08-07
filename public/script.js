@@ -1,6 +1,5 @@
-let x;
-    x = 100;
-    x = "Hi";
-    window.alert("Welcome to\n Web Development")
-    document.write("Welcome to <br/> Web Development")
-    console.log("Welcome to \n Web Development")
+let age = 13
+let maxAge = 80
+let numberPerDay = 2
+
+let totalRequired = (numPerDay * 365) * (maxAge - age);
