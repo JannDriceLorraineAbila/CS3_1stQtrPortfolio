@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Q1 3rd Graded Exercise submitted by Jann Drice Lorraine Abila of Magnesium</h2>
+
+<p>Guess a number between 1 and 100:</p>
+<input type="number" id="guess">
+<button onclick="checkIt()">Check</button>
+<p id="output"></p>
+
+    <script>
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1  to 100 when the page loads
+
+        function checkIt() {
+            var userGuess = document.getElementById("guess").value;
+            var result = "";
+
+            if (userGuess < dNumber) {
+                result = "Higher";
+            } else if (userGuess > dNumber) {
+                result = "Lower";
+            } else {
+                result = "You are correct!";
+            }
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+
+</body>
+</html>

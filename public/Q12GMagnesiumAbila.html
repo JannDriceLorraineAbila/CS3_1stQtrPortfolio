@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q12GMagnesiumABILA</title>
+</head>
+<body>
+  <h2>Q1 3rd Graded Exercise submitted by ABILA Jann Drice Lorraine of Magnesium</h2>
+
+  <h1>Meal Cost Calculator</h1>
+
+  <label>Enter Meal Price: </label>
+  <input id="mealPrice" /><br><br>
+
+  <label>Enter Tip: </label>
+  <input id="tip" /><br><br>
+
+  <label>Enter Service Charge (%): </label>
+  <input id="serviceCharge" /><br><br>
+
+  <button onclick="totalMeal()">Accept Input</button>
+
+  <p id="result"></p>
+
+  <script>
+    function totalMeal() {
+      let mp = parseFloat(document.getElementById("mealPrice").value);
+      let tip = parseFloat(document.getElementById("tip").value);
+      let sc = parseFloat(document.getElementById("serviceCharge").value);
+
+      let totalCost = mp + tip + (sc / 100 * mp);
+
+      document.getElementById("result").innerText =
+        "Total Meal: " + totalCost.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
